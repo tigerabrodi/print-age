@@ -17,7 +17,7 @@ fn main() {
                  break;
              },
              Err(error) => {
-                 println!("Something went wrong, please make sure have typed a number: {}", error);
+                 println!("Something went wrong: {}", error);
                  continue;
              }
          }
