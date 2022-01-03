@@ -1,4 +1,5 @@
-use std::{io, num::ParseIntError};
+use std::{io};
+use age::parse_age;
 
 fn main() {
     loop {
@@ -22,8 +23,4 @@ fn main() {
              }
          }
     }
-}
-
-fn parse_age(age: &mut String) -> Result<u32, ParseIntError> {
-    age.trim().parse()
 }
