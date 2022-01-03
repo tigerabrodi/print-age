@@ -9,7 +9,7 @@ fn main() {
      
          io::stdin().read_line(&mut age).expect("Failed to read line!");
 
-         let age: Result<u32, ParseIntError> = age.trim().parse();
+         let age = parse_age(&mut age);
      
          match age {
              Ok(age) => {
@@ -22,4 +22,8 @@ fn main() {
              }
          }
     }
+}
+
+fn parse_age(age: &mut String) -> Result<u32, ParseIntError> {
+    age.trim().parse()
 }
